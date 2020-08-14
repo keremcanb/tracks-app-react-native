@@ -12,9 +12,11 @@ const SignupScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Spacer>
-        <Text h3>Sign Up for Tracker</Text>
+        <Text h3>Sign Up</Text>
       </Spacer>
+
       <Spacer />
+
       <Input
         label='Email'
         value={email}
@@ -22,7 +24,9 @@ const SignupScreen = ({ navigation }) => {
         autoCapitalize='none'
         autoCorrect={false}
       />
+
       <Spacer />
+
       <Input
         label='Password'
         value={password}
@@ -31,21 +35,21 @@ const SignupScreen = ({ navigation }) => {
         autoCorrect={false}
         secureTextEntry
       />
+
       {!!state.errorMessage && (
         <Text style={styles.errorMessage}>{state.errorMessage}</Text>
       )}
+
       <Spacer>
-        <Button title='Sign Up' onPress={() => signup({ email, password })} />
+        <Button title='Submit' onPress={() => signup({ email, password })} />
       </Spacer>
     </View>
   );
 };
 
-SignupScreen.navigationOptions = () => {
-  return {
-    headerShown: false,
-  };
-};
+SignupScreen.navigationOptions = () => ({
+  headerShown: false,
+});
 
 const styles = StyleSheet.create({
   container: {
