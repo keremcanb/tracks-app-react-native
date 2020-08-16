@@ -12,15 +12,12 @@ const SigninScreen = () => {
     <View style={styles.container}>
       <NavigationEvents onWillBlur={clearErrorMessage} />
       <AuthForm
-        headerText='Sign In for Tracker'
-        errorMessage={state.errorMessage}
-        submitButtonText='Sign In'
         onSubmit={signin}
+        errorMessage={state.errorMessage}
+        headerText='Sign In'
+        submitButtonText='Submit'
       />
-      <NavLink
-        routeName='Signup'
-        text='Do not have an account? Sign up instead'
-      />
+      <NavLink routeName='Signup' text='Sign Up' />
     </View>
   );
 };
