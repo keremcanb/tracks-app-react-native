@@ -14,10 +14,10 @@ const SignupScreen = () => {
       <AuthForm
         onSubmit={signup}
         errorMessage={state.errorMessage}
-        headerText='Sign Up'
-        submitButtonText='Submit'
+        headerText="Sign Up"
+        submitButtonText="Submit"
       />
-      <NavLink routeName='Signin' text='Sign In' />
+      <NavLink routeName="Signin" text="Sign In" />
     </View>
   );
 };

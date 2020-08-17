@@ -32,7 +32,7 @@ const Map = () => {
       {/* <Polyline coordinates={points} /> */}
     </MapView>
   ) : (
-    <ActivityIndicator size='large' style={{ marginTop: 200 }} />
+    <ActivityIndicator size="large" style={{ marginTop: 200 }} />
   );
 };
 
