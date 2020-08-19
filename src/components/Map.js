@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { StyleSheet, ActivityIndicator } from 'react-native';
-import MapView, { Polyline, Circle, Marker } from 'react-native-maps';
+import MapView, { Polyline, Circle } from 'react-native-maps';
 import { Context as LocationContext } from '../context/LocationContext';
 
 const Map = () => {
@@ -22,7 +22,6 @@ const Map = () => {
         longitudeDelta: 0.01,
       }}
     >
-      {/* <Marker coordinate={currentLocation.coords} /> */}
       <Circle
         center={currentLocation.coords}
         radius={30}
